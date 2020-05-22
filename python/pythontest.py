@@ -60,5 +60,5 @@
 #     while len(h) < 4:
 #         h = '0' + h
 #     print(h)
-# else: for文でのelseは、for文が正常処理できた場合のみ処理される
+# else: #for文でのelseは、for文が正常処理できた場合のみ処理される
 #     print('OK')
