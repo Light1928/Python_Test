@@ -29,3 +29,12 @@
 # help(trip)
 #__doc__を使うとコメント部分のみ表示できる
 # help(trip.__doc__)
+
+# def hoge(a=1,b=2,c=3):
+#     print(a)
+#     print(b)
+#     print(c)
+
+# hoge(c=999)
+
+# print(list(map(lambda x:x*x,[1,2,3])))
