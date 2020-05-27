@@ -38,3 +38,11 @@
 # hoge(c=999)
 
 # print(list(map(lambda x:x*x,[1,2,3])))
+
+def cat():
+    global pet
+    pet = 'cat'
+   
+pet = 'dog'
+cat()
+print(pet)
