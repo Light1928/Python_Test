@@ -39,10 +39,39 @@
 
 # print(list(map(lambda x:x*x,[1,2,3])))
 
-def cat():
-    global pet
-    pet = 'cat'
+# def cat():
+#     global pet
+#     pet = 'cat'
    
-pet = 'dog'
-cat()
-print(pet)
+# pet = 'dog'
+# cat()
+# print(pet)
+
+#小テスト
+
+# def bmi(hei,wei):
+#     return wei/hei/hei*10000
+
+# print(bmi(wei=70,hei=175)) #キーワード引数
+
+
+# def hoge(x=1,y=2,z=3):
+#     print('x = ' + str(x))
+#     print('y = ' + str(y))
+#     print('z = ' + str(z))
+
+# hoge(10,z=10)
+
+# hoge = list(range(3,6))
+# print(hoge)
+
+
+# hoge = list(map(lambda x: 9*x, range(1,10)))
+# print(hoge)
+
+# def hoge():
+#     global a
+#     a = 'さようなら'
+#     print(a)
+# a = 'おはよう' #グローバル変数
+# hoge()
