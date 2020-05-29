@@ -75,3 +75,18 @@
 #     print(a)
 # a = 'おはよう' #グローバル変数
 # hoge()
+
+def hoge():
+    def moge():
+       # nonlocal a  #nonlocalを使うと外側（hoge)のローカル変数に代入することができる
+        global a     #関数の外に定義しているグローバル変数を使用
+        a = '111'   #moge内のローカル変数
+        print(a)
+
+    a = '222'       # hoge内のローカル変数
+    moge()
+    print(a)
+
+a = '333' #グローバル変数
+hoge()
+print(a)
