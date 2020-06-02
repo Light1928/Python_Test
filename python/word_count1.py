@@ -2,7 +2,7 @@ import sys
 
 from janome.tokenizer import Tokenizer
 
-text = input('文字を入力してください：')
+text = input('文を入力してください：')
 tok = Tokenizer()
 tokens = tok.tokenize(text)
 
