@@ -171,6 +171,7 @@
 #     print(i)
 
 #FizzBuzzゲーム
+#returnだと一度returnするとおわってしまう
 # def fizzbuzz(n):
 #     for x in range(1,n):
 #         if x % 15 == 0:
