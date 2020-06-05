@@ -96,10 +96,89 @@
 # del hoge[1803]
 # print(hoge)
 
-def test(*x,**y): #可変長引数のため引数は０以上の個数　(**y)キーワード引数の場合辞書、(*x)位置引数の場合タプル
-    print(x)
-    print(y)
+# def test(*x,**y): #可変長引数のため引数は０以上の個数　(**y)キーワード引数の場合辞書、(*x)位置引数の場合タプル
+#     print(x)
+#     print(y)
 
-test(a=4,b=5) #キーワード引数の場合
-test(1,2,3) #　位置引数の場合タプルとして*xに渡される
-test(a=4,b=5,c=6) #キーワード引数の場合**yに渡される
+# test(a=4,b=5) #キーワード引数の場合
+# test(1,2,3) #　位置引数の場合タプルとして*xに渡される
+# test(a=4,b=5,c=6) #キーワード引数の場合**yに渡される
+
+
+# a=[]
+# for x in range(1,10):
+#     a.append(x**2)
+#print(a)
+
+#上３行を１行にまとめることができる（内包表記）
+# a = [x**2 for x in range(1,10)]
+# print(a)
+
+#条件もつけることが可能
+# a = [x**2 for x in range(1,10) if x % 3 == 0]
+# print(a)
+
+#Fizz Buzzゲーム　プログラマ入入社試験問題によく出る
+# x = 2
+# print('Fizz' if x % 3 == 0 else x)
+
+# x = 3
+# print('Fizz' if x % 3 == 0 else x) 
+
+# a= ['Fizz' if x % 3 == 0 else x for x in range(1,10)]
+# print(a)
+
+#上のプログラムを崩した場合
+# a = []
+# for x in range(1,10):
+#     if(x % 3 == 0):
+#         a.append('Fazz')
+#     else:
+#         a.append(x)
+# print(a)
+
+#end=''で改行なしにできる
+#ジェネレータ式
+# number = (x for x in range(10))
+# for x in number:
+#     print(x)
+
+# def do_return():
+#     return 1
+#     return 2
+#     return 'Fizz'
+#     return 4
+#     return 'Buzz'
+
+# print(do_return())
+# print(do_return())
+# print(do_return()) #1しか帰ってこない
+
+# def do_yield():
+#     yield 1
+#     yield 2
+#     yield 'Fizz'
+#     yield 4
+#     yield 'Buzz'
+
+# print(do_yield())
+# print(do_yield())
+# print(do_yield())
+
+#イテラブルのためfor文と組み合わせることが可能
+#イテラブルとは繰り返しアクセエス可能なオブジェクトのこと リスト,タブル,rangeなど
+# for i in do_yield():
+#     print(i)
+
+#FizzBuzzゲーム
+# def fizzbuzz(n):
+#     for x in range(1,n):
+#         if x % 15 == 0:
+#             yield 'FizzBuzz'
+#         elif x % 5 == 0:
+#             yield 'Buzz'
+#         elif x % 3 == 0:
+#             yield 'Fizz'
+#         else:
+#             yield x
+# print(list(fizzbuzz(16)))
