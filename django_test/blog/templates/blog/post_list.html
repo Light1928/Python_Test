@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>test Python Django</title>
+    </head>
+<body>
+
+<center>
+    <h1>test Python Django</h1>
+        {% for post in posts %}
+            {{post.title}}
+            {{post.author}}
+            {{post.created_date}}
+            {{post.text}}<br><br>
+        {% endfor %}
+</center>
+
+</body>
+
+</html>
+
+
