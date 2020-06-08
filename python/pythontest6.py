@@ -183,3 +183,20 @@
 #         else:
 #             yield x
 # print(list(fizzbuzz(16)))
+
+#hoge = (10,20,30)
+# hoge = 10,20,30
+# print(hoge)
+# 
+# hoge = 100,90,80
+# for rank,hoge in enumerate(hoge,1):
+#     print(str(rank)+'位' + str(hoge)+'点')
+
+hoge = {10,20,30}
+print(hoge)
+#少数も整数と同じになる
+hoge={10,20,30,20,10.0}
+print(hoge)
+
+moge = [1,2,3,1,2,3,1,2,3]
+print(set(moge))
