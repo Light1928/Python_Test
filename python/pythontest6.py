@@ -192,11 +192,46 @@
 # for rank,hoge in enumerate(hoge,1):
 #     print(str(rank)+'位' + str(hoge)+'点')
 
-hoge = {10,20,30}
-print(hoge)
-#少数も整数と同じになる
-hoge={10,20,30,20,10.0}
+# hoge = {10,20,30}
+# print(hoge)
+# #少数も整数と同じになる
+# hoge={10,20,30,20,10.0}
+# print(hoge)
+
+# moge = [1,2,3,1,2,3,1,2,3]
+# print(set(moge))
+
+#辞書
+hoge = {101:'本寺',102:'高井'}
+# print(hoge[101])
+
+# #キーを取り出す場合
+# for h in hoge:
+#     print(h)
+
+#辞書から全てのキーと値のペアを取り出す
+for h1,h2 in hoge.items():
+    print(str(h1)+'号室は'+h2+'さん')
+
+
+hoge[103] = '森実'
 print(hoge)
 
-moge = [1,2,3,1,2,3,1,2,3]
-print(set(moge))
+hoge[103] = '馬場'
+print(hoge)
+
+del hoge[103]
+print(hoge)
+
+hoge =[]
+for x in range(1,10):
+    if x % 3 != 0:
+        hoge.append(x)
+    else:
+        hoge.append('F')
+print(hoge)
+
+#１行で表す
+print([x for x in range(1,10) if x % 3 != 0])
+
+print('F' if x % 3 == 0 else x for x in range(1,10))
