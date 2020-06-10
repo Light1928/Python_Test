@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -8,12 +7,29 @@
     <link rel="stylesheet" href="{% static 'css/style.css' " %}"/>
     <script src="% static 'javascript/sample.js' "%}"></script>
   </head>
+
   <body>
     <center><h1>Django TODOリスト</h1></center>
     <img src="{% static 'images/django.png' %}" alt="サンプル画像">
 
-    <p>作成者は<b>{{ name }}</b>です。</p>
+    <table border="=1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>USERNAME</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for message in messages %}
+          <tr>
+            <td>{{ message.id }}</td>
+            <td>{{ message.name }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
 
+    <p>作成者は<b>{{ name }}</b>です。</p>
     <p>{{insert_forms|safe}}</p>
     <!-- メソッド呼び出し -->
     <form action="{% url 'home' %}" method="post">
@@ -21,7 +37,9 @@
         {{ form }}
         <input type="submit" value="送信">
     </form>
-
-
+    
   </body>
 </html>
+
+
+
