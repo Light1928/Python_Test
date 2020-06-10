@@ -1,9 +1,27 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
+    <meta charset="=utf-8">
     <title>Django TODOリスト</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' " %}"/>
+    <script src="% static 'javascript/sample.js' "%}"></script>
   </head>
   <body>
     <center><h1>Django TODOリスト</h1></center>
+    <img src="{% static 'images/django.png' %}" alt="サンプル画像">
+
+    <p>作成者は<b>{{ name }}</b>です。</p>
+
+    <p>{{insert_forms|safe}}</p>
+    <!-- メソッド呼び出し -->
+    <form action="{% url 'home' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="送信">
+    </form>
+
+
   </body>
 </html>

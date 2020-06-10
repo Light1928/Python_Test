@@ -1,5 +1,6 @@
 import tkinter                          #GUI作成用
 from tkinter import messagebox          #メッセージボックス用
+#from tkinter import ttk
 import smtplib                          #メール送信用
 from email.mime.text import MIMEText    
 from email.utils import formatdate
@@ -7,7 +8,7 @@ from email.utils import formatdate
 
 #########送信ボタンが押されたら呼び出される関数###########
 def gmail():
-    FROM_ADDRESS = '自分のアカウントのメールアドレス'
+    FROM_ADDRESS = '自分のメールアドレス@gmail.com'
     MY_PASSWORD = '自分のアカウントのパスワード'
     TO_ADDRESS = txt1.get()
     BCC = ''
@@ -40,7 +41,7 @@ def gmail():
     try:
         msg = create_message(FROM_ADDRESS, to_addr, BCC, subject, body)
         send(FROM_ADDRESS, to_addr, msg)
-        messagebox.showinfo('成功','送信しました',)
+        messagebox.showinfo('成功','送信しました')
     except:
         messagebox.showinfo('失敗','送信できませんでした')
 ########################################################
