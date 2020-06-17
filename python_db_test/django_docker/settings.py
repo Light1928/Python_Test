@@ -26,6 +26,7 @@ SECRET_KEY = 'h1)=e&17dy*6_r1(_*mflqzu*0+bkr538ejl&q7$zvxgg)emu2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#pc以外からアクセス（スマホなど）したい場合は["*"]とすること ホストと同じLAN環境のみ
 ALLOWED_HOSTS = []
 
 
